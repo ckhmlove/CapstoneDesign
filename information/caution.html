@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Camping Web Service</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Car Camping" />
+  <meta property="og:title" content="Car Camping Web Service" />
+  <meta property="og:description" content="초보 차박러들을 위한 웹 서비스" />
+  <meta property="og:image" content="../favicon.png" />
+  <meta property="og:url" content="https://carcampwebservice.co.kr" />
+
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="Car Camping" />
+  <meta property="twitter:title" content="Car Camping Web Service" />
+  <meta property="twitter:description" content="초보 차박러들을 위한 웹 서비스" />
+  <meta property="twitter:image" content="../favicon.png" />
+  <meta property="twitter:url" content="https://carcampwebservice.co.kr" />
+  
+  <link rel="stylesheet" href="../favicon.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/information.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- GSAP & ScrollToPlugin    -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js" integrity="sha512-eI+25yMAnyrpomQoYCqvHBmY4dLfqKWPnD4j8y0E3Js+yqpF26xncL4t81M1zxC+ISYfRoCN52rN/n0q2UIBZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+  
+  <script defer src="../js/main.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="inner">
+      
+      <a href="/" class="logo">
+        <img src="../images/carcamping_logo.png" alt="Car Camping" />
+      </a>
+
+      <div class="sub-menu">
+        <ul class="menu">
+          <li>
+            <a href="signin">로그인</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">마이 페이지</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">고객센터</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">사이트맵</a>
+          </li>
+        </ul>
+        <div class="search">
+          <input type="text" />
+          <div class="material-icons">search</div>
+        </div>
+      </div>
+
+      <ul class="main-menu">
+        <li class="item">
+          <div class="item__name">차박정보</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>차박정보</h4>
+                  <ul>
+                    <li><a href="./definition.html">차박이란?</a></li> 
+                    <li><a href="./materials.html">차박 준비물</a></li> 
+                    <li><a href="./caution.html">차박 주의사항</a></li> 
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4>차박에 대해 알아보기</h4>
+                <p>차박의 정의, 준비물, 주의사항에 대해 알아보세요.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">캠핑장 검색</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>캠핑장 검색</h4>
+                  <ul>
+                    <li>키워드 검색</li>
+                    <li>태그 검색</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4 class="new">캠핑장 정보 검색</h4>
+                <p>키워드 및 태그를 통해 캠핑장을 검색해보세요.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">게시판</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>게시판</h4>
+                  <ul>
+                    <li>실제후기</li>
+                    <li>블로그 리뷰 몰아보기</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4 class="new">생생한 정보</h4>
+                <p>실제후기와 블로그 리뷰 몰아보기로 생생한 정보를 얻어보세요.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">공지사항</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>공지사항</h4>
+                  <ul>
+                    <li>사이트 공지사항</li>
+                    <li>캠핑장 공지사항</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4 class="new">공지사항</h4>
+                <p>사이트와 캠핑장에 대한 공지사항을 읽어보세요.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">이벤트</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>이벤트</h4>
+                  <ul>
+                    <li>진행중인 이벤트</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4 class="new">이벤트 참여</h4>
+                <p>이벤트에 참여하고 선물도 받아보세요.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </header>
+
+<!-- NAME -->
+
+<section class="name">
+  <div class="inner">
+
+    <div class="main-name">차박정보</div>
+    <div class="sub-name">- 차박 주의사항 -</div>
+
+  </div>
+</section>
+
+
+<!-- INFORMATION -->
+<section class="information">
+  <div class="inner">
+    <div class="title">
+
+      <p>차박 주의사항</p><hr color="#e0d9d9">
+
+      <div class="content">
+
+        <img src="../images/caution_img.png" alt="차박정보 -차박 주의사항- 이미지">
+
+        <pre>
+
+          <p><mark>날씨 및 장소 파악</mark></p>
+          차박을 포함한 모든 캠핑은 날씨가 중요하다. 또한 강이나 호수 주변 등 침수 위험이 있거나 경사진 곳에 주차하지 않아야 한다.
+          따라서 장소의 경우 웬만하면 평지로 선정하는 것이 안전하다.
+          
+          야외에 장소를 선정할 경우, 공중 화장실이나 편의시설이 있는지 확인하거나 간이 화장실을 미리 준비하는 것이 좋다.
+          
+          추가로 국립공원, 국유림 임도, 개인 사유지 등 에서의 차박 행위는 금지되어 있으므로 이를 잘 확인하여야 한다. 
+
+          <p><mark>주차 시 자동차의 사이드브레이크 채우기</mark></p>
+          경사진 곳에 주차를 했거나 평지에 주차를 했어도 경사가 나있는 땅일 수 있으므로 반드시 주차를 한 후에는 사이드브레이크를
+          채우고 받침목 혹은 고임목을 타이어에 놓고 차량을 고정시켜야 한다. 
+
+          <p><mark>화기 사용</mark></p>
+          차내에서 절대 화기 사용을 해서는 안되고 화기를 사용할 일이 있으면 야외에서 해야한다.
+          또한 혹시 모를 화재 발생을 대비하여 차량용 소화기를 가지고 다니는 것이 좋다.
+          
+          <p><mark>취침 전, 창문 살짝 열기</mark></p>
+          밀폐된 공간에서 에어컨이나 히터를 과도하게 사용하면 질식사의 위험이 있으니 공기 순환을 위해 취침 전에 
+          창문을 살짝 열어 환기구를 확보해야 한다.
+
+          <p><mark>쓰레기 챙겨오기</mark></p>
+          차박을 할 경우 다양한 쓰레기들이 생기기 마련인데 무단으로 투기하는 사람들이 많아 환경문제가 심각하다.
+          반드시 주변을 깨긋이 유지하고 모든 쓰레기는 가져와서 수거하여야 한다.
+        </pre>
+
+        <a href="../index.html" class="btn">홈으로 가기</a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="inner">
+
+    <ul class="menu">
+      <li><a href="javascript:void(0)" class="yellowgreen">개인정보처리방침</a></li>
+      <li><a href="javascript:void(0)">전자우편 무단 수집 거부</a></li>
+      <li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
+      <li><a href="javascript:void(0)">캠핑장 등록 안내</a></li>
+      <li><a href="javascript:void(0)">미등록 야영장 불법영업신고</a></li>
+    </ul>
+
+    <div class="btn-group">
+      <a href="javascript:void(0)" class="btn btn--white">찾아오시는 길</a>
+      <a href="javascript:void(0)" class="btn btn--white">사이트맵</a>
+    </div>
+
+    <div class="info">
+      <span>사업자등록번호 20174048</span>
+      <span>(주) 초보 차박러들을 위한 웹 서비스</span>
+      <span>TEL : 02) 1234-5678 / FAX : 02) 8765-4321</span>
+      <span>개인정보 책임자 : 조현묵</span>
+    </div>
+
+    <p class="copyright">
+      &copy; <span class="this-year"></span> Car Camping Web Service. All Rights Reserved.
+    </p>
+
+  </div>
+</footer>
+
+
+<div id="to-top">
+  <div class="material-icons">arrow_upward</div>
+</div>
+
+</body>
+</html>

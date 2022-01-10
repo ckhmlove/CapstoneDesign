@@ -1,0 +1,53 @@
+.introduction {
+  margin-top: 150px;
+  background-image: url("../images/visual_bg.png");
+  background-position: center;
+}
+.introduction .inner {
+  height: 600px;
+}
+.introduction .inner h1 {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: right;
+  padding: 70px;
+  padding-right: 60px;
+}
+.introduction .inner h2 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: right;
+  padding: 30px;
+  padding-right: 120px;
+}
+.introduction .inner .introduction-img {
+  position: absolute;
+  top: 100px;
+  left: -420px;
+}
+.introduction .inner .menu {
+  margin-top: 50px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  text-align: center;
+}
+.introduction .inner .menu li {
+  font-size: 25px;
+  font-weight: 700;
+  margin-right: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.introduction .inner .menu li:last-child {
+  margin-right: 0;
+}
+.introduction .inner .menu a {
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.introduction .inner .btn {
+  width: 230px;
+  font-size: 20px;
+}

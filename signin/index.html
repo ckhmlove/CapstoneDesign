@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Camping Web Service</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Car Camping" />
+  <meta property="og:title" content="Car Camping Web Service" />
+  <meta property="og:description" content="초보 차박러들을 위한 웹 서비스" />
+  <meta property="og:image" content="../favicon.png" />
+  <meta property="og:url" content="https://carcampwebservice.co.kr" />
+
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="Car Camping" />
+  <meta property="twitter:title" content="Car Camping Web Service" />
+  <meta property="twitter:description" content="초보 차박러들을 위한 웹 서비스" />
+  <meta property="twitter:image" content="../favicon.png" />
+  <meta property="twitter:url" content="https://carcampwebservice.co.kr" />
+  
+  <link rel="stylesheet" href="../favicon.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/signin.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- GSAP & ScrollToPlugin    -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js" integrity="sha512-eI+25yMAnyrpomQoYCqvHBmY4dLfqKWPnD4j8y0E3Js+yqpF26xncL4t81M1zxC+ISYfRoCN52rN/n0q2UIBZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+  
+  <script defer src="../js/main.js"></script>
+</head>
+<body>
+  
+  <!-- HEADER -->
+  <header>
+    <div class="inner">
+      
+      <a href="/" class="logo">
+        <img src="../images/carcamping_logo.png" alt="Car Camping" />
+      </a>
+
+      <div class="sub-menu">
+        <ul class="menu">
+          <li>
+            <a href="signin">로그인</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">마이 페이지</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">고객센터</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">사이트맵</a>
+          </li>
+        </ul>
+        <div class="search">
+          <input type="text" />
+          <div class="material-icons">search</div>
+        </div>
+      </div>
+
+      <ul class="main-menu">
+        <li class="item">
+          <div class="item__name">차박정보</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>차박정보</h4>
+                  <ul>
+                    <li><a href="../information/definition.html">차박이란?</a></li>
+                    <li><a href="../information/materials.html">차박 준비물</a></li>
+                    <li><a href="../information/caution.html">차박 주의사항</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4>차박에 대해 알아보기</h4>
+                <p>차박의 정의, 준비물, 주의사항에 대해 알아보세요.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">캠핑장 검색</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>캠핑장 검색</h4>
+                  <ul>
+                    <li>키워드 검색</li>
+                    <li>태그 검색</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4 class="new">캠핑장 정보 검색</h4>
+                <p>키워드 및 태그를 통해 캠핑장을 검색해보세요.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">게시판</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>게시판</h4>
+                  <ul>
+                    <li>실제후기</li>
+                    <li>블로그 리뷰 몰아보기</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4 class="new">생생한 정보</h4>
+                <p>실제후기와 블로그 리뷰 몰아보기로 생생한 정보를 얻어보세요.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">고객센터</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>고객센터</h4>
+                  <ul>
+                    <li>공지사항</li>
+                    <li>문의사항</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4 class="new">공지사항과 문의사항</h4>
+                <p>궁금한 점이나 알아보고 싶은 점을 찾고 작성해보세요.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">이벤트</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>이벤트</h4>
+                  <ul>
+                    <li>진행중인 이벤트</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4 class="new">이벤트 참여</h4>
+                <p>이벤트에 참여하고 선물도 받아보세요.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </header>
+
+  <!-- SIGN IN -->
+  <section class="signin">
+    <h1>로그인</h1>
+    <div class="signin__card">
+      <h2>
+        <strong>초보 차박러들을 위한 웹 서비스</strong>
+      </h2>
+      <form>
+        <input type="text" placeholder="아이디를 입력하세요." />
+        <input type="password" placeholder="비밀번호를 입력하세요." />
+        <input type="submit" value="로그인" />
+        <p>
+          * 비밀번호를 타 사이트와 같이 사용할 경우 도용 위험이 있으니, <br />
+          정기적으로 비밀번호를 변경하세요!
+        </p>
+      </form>
+      <div class="actions">
+        <a href="javascript:void(0)">회원가입</a>
+        <a href="javascript:void(0)">아이디 찾기</a>
+        <a href="javascript:void(0)">비밀번호 찾기</a>
+      </div>
+    </div>
+  </section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="inner">
+
+    <ul class="menu">
+      <li><a href="javascript:void(0)" class="yellowgreen">개인정보처리방침</a></li>
+      <li><a href="javascript:void(0)">전자우편 무단 수집 거부</a></li>
+      <li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
+      <li><a href="javascript:void(0)">캠핑장 등록 안내</a></li>
+      <li><a href="javascript:void(0)">미등록 야영장 불법영업신고</a></li>
+    </ul>
+
+    <div class="btn-group">
+      <a href="javascript:void(0)" class="btn btn--white">찾아오시는 길</a>
+      <a href="javascript:void(0)" class="btn btn--white">사이트맵</a>
+    </div>
+
+    <div class="info">
+      <span>사업자등록번호 20174048</span>
+      <span>(주) 초보 차박러들을 위한 웹 서비스</span>
+      <span>TEL : 02) 1234-5678 / FAX : 02) 8765-4321</span>
+      <span>개인정보 책임자 : 조현묵</span>
+    </div>
+
+    <p class="copyright">
+      &copy; <span class="this-year"></span> Car Camping Web Service. All Rights Reserved.
+    </p>
+
+  </div>
+</footer>
+
+
+<div id="to-top">
+  <div class="material-icons">arrow_upward</div>
+</div>
+
+</body>
+</html>
